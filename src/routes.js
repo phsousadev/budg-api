@@ -2,7 +2,7 @@ import { Router } from "express";
 
 const routes = new Router()
 
-routes.get('/health', (request, response) => {
+routes.get('/health', async (request, response) => {
   return response.status(200).json({
     message: 'Hello World ....'
   })
