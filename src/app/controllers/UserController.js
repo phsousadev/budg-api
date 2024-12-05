@@ -10,7 +10,7 @@ class UserController {
       message: 'Email Already Exists'
     })
 
-    const data = UserService.create({ first_name, last_name, email, password })
+    const data = await UserService.create({ first_name, last_name, email, password })
 
     return response.status(201).json(data)
   }
